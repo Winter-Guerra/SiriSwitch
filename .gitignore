@@ -1,0 +1,11 @@
+.DS_Store
+
+obj
+*.deb
+_
+
+theos
+.theos
+
+libcurl
+curl-7.23.1/

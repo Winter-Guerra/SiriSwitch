@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = SiriSwitchPreferences;
+	cell = PSLinkCell;
+	detail = SSPreferencesListController;
+	icon = SiriSwitch.png;
+	isController = 1;
+	label = SiriSwitch;
+    };
+}

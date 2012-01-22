@@ -1,0 +1,2 @@
+- Delete all spire specific stuff (The unnecessary stuff)
+- Rework hostname hook code to only replace the default host IF the switch is set in the preferences
