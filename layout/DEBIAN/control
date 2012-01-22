@@ -1,0 +1,15 @@
+Package: com.XtremD.SiriSwitch
+Name: SiriSwitch
+Section: Tweaks
+Description: A controller for Siri's proxying settings
+Version: 1.0
+Pre-Depends: firmware (>= 5.0), firmware (<< 5.1)
+Depends: mobilesubstrate, preferenceloader
+Architecture: iphoneos-arm
+Depiction: http://chpwn.com/cydia/spire.html
+Homepage: http://chpwn.com/cydia/spire.html
+Author: XtremD <XtremD@me.com>
+Maintainer: chpwn <sXtremD@me.com>
+Sponsor: thebigboss.org <http://thebigboss.org>
+Tag: purpose::extension
+dev: XtremD
