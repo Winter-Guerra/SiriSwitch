@@ -3,7 +3,7 @@ include /opt/theos/makefiles/common.mk
 
 THEOS_MAKE_PATH=/opt/theos/makefiles/
 
-TWEAK_NAME = SpireInjector
+TWEAK_NAME = SiriSwitchInjector
 SpireInjector_FILES = Injector.xmi
 SpireInjector_OBJCFLAGS = -I$(THEOS_PROJECT_DIR) -F$(THEOS_PROJECT_DIR)
 

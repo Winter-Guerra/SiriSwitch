@@ -3,7 +3,7 @@ include /opt/theos/makefiles/common.mk
 
 THEOS_MAKE_PATH=/opt/theos/makefiles/
 
-TWEAK_NAME = SpireHooks
+TWEAK_NAME = SiriSwitchHooks
 SpireHooks_FILES = Hooks.xmi
 SpireHooks_OBJCFLAGS = -I$(THEOS_PROJECT_DIR) -F$(THEOS_PROJECT_DIR)
 

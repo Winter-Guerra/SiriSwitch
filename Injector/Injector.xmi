@@ -1,14 +1,14 @@
 
-#import "SPPreferences.h"
+#import "SSPreferences.h"
 
 %hook ADAccount
 
 - (NSString *)hostname {
-    SPPreferences *preferences = SPLoadPreferences();
+    SSPreferences *preferences = SSLoadPreferences();
 
-    // Only use the proxy URL if one is set.
-    if (SPPreferencesHasProxyURL(preferences)) {
-        return SPPreferencesGetProxyURL(preferences);
+    // Only use the proxy URL only if the user has turned proxying ON.
+    if (SSPreferencesUseProxyURL(preferences)) {
+        return SSPreferencesGetProxyURL(preferences);
     } else {
         return %orig;
     }
