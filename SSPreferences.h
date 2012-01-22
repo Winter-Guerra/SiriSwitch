@@ -16,6 +16,6 @@ static BOOL SSPreferencesHasProxyURL(SSPreferences *preferences) {
     return proxy != nil && [[proxy stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] > 0;
 }
 
-static BOOL *SSPreferencesUseProxyURL(SSPreferences *preferences) {
-    return [preferences objectForKey:@"SSProxySwitch"];
+static BOOL SSPreferencesUseProxyURL(SSPreferences *preferences) {
+    return [[preferences valueForKey:@"SSProxySwitch"] boolValue];
 }
