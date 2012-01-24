@@ -13,12 +13,12 @@
 Please be sure you understand this before entering a proxy URL above.</string>
 		</dict>
 		<dict>
+			<key>PostNotification</key>
+			<string>com.XtremD.SiriSwitch.preferences.changed</string>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>defaults</key>
 			<string>com.XtremD.SiriSwitch.preferences</string>
-			<key>PostNotification</key>
-			<string>com.XtremD.SiriSwitch.preferences.changed</string>
 			<key>default</key>
 			<false/>
 			<key>key</key>
@@ -27,6 +27,8 @@ Please be sure you understand this before entering a proxy URL above.</string>
 			<string>Enable Siri Proxying</string>
 		</dict>
 		<dict>
+			<key>PostNotification</key>
+			<string>com.XtremD.SiriSwitch.preferences.changed</string>
 			<key>isURL</key>
 			<true/>
 			<key>cell</key>
@@ -37,8 +39,6 @@ Please be sure you understand this before entering a proxy URL above.</string>
 			<string>https://user.example.com</string>
 			<key>defaults</key>
 			<string>com.XtremD.SiriSwitch.preferences</string>
-			<key>PostNotification</key>
-			<string>com.XtremD.SiriSwitch.preferences.changed</string>
 			<key>key</key>
 			<string>SSProxyURL</string>
 			<key>label</key>

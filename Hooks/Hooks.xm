@@ -5,7 +5,7 @@ static BOOL shouldOverrideUnavailableText = NO;
 
 %hook AFConnection
 
-- (BOOL)isAvailable {
++ (BOOL)isAvailable {
     SSPreferences *preferences = SSLoadPreferences();
 
     if (!SSPreferencesHasProxyURL(preferences) && SSPreferencesUseProxyURL(preferences)) {
@@ -13,6 +13,7 @@ static BOOL shouldOverrideUnavailableText = NO;
     } else {
         return %orig;
     }
+    
 }
 
 %end
