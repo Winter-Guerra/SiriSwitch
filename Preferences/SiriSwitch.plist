@@ -3,7 +3,6 @@
 		bundle = "SiriSwitchPreferences";
 		cell = PSLinkCell;
 		detail = "SSPreferencesListController";
-		icon = "SiriSwitchPreferences.png";
 		isController = 1;
 		label = SiriSwitch;
 	};
