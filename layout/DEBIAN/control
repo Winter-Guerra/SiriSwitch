@@ -1,7 +1,7 @@
 Package: com.XtremD.SiriSwitch
 Name: SiriSwitch
 Section: Tweaks
-Description: A controller for Siri's proxying settings
+Description: A easy to use settings pane for configuring Siri's proxy settings
 Version: 1.0
 Pre-Depends: firmware (>= 5.0), firmware (<< 5.1)
 Depends: mobilesubstrate, preferenceloader
