@@ -6,7 +6,7 @@
 - (id)loadSpecifiersFromPlistName:(NSString *)name target:(id)target;
 @end
 
-@interface SSPreferencesListController : PSListController
+@interface SSPreferencesListController : PSListController <UIActionSheetDelegate>
 @end
 
 @implementation SSPreferencesListController
@@ -19,21 +19,40 @@
     return _specifiers;
 }
 
-- (void)moreInfoPressed:(id)specifier {
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://chpwn.com/apps/spire"]];
-    UIActionSheet *moreInfoApology = [[UIActionSheet alloc] 
-    	initWithTitle:@"More info on this tool is not available at this time. Sorry!" 
+- (void)havingTroublePressed:(id)specifier {
+    UIActionSheet *havingTrouble = [[UIActionSheet alloc] 
+    	initWithTitle:@"Sometimes Siri likes to keep her connection to the server alive, regardless if you haven't asked her anything for a while. If Siri refuses to transfer hosts, try toggling Airplane Mode or restarting your iPhone to force a connection reset." 
         delegate:nil 
         cancelButtonTitle:nil  destructiveButtonTitle:nil 
         otherButtonTitles:@"Alright", nil];
-    [moreInfoApology showInView:self.view];
-    [moreInfoApology release];
+    [havingTrouble showInView:self.view];
+    [havingTrouble release];
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == [actionSheet firstOtherButtonIndex]) { //Open bug report page
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/xtremd/SiriSwitch/issues"]];
+        
+    }
+}
+
+
+- (void)stillHavingTroublePressed:(id)specifier {
+    UIActionSheet *githubLinkSheet = [[UIActionSheet alloc] 
+                                      initWithTitle:@"Still having trouble? Open a bug report on my Github repo!" 
+                                      delegate:self
+                                      cancelButtonTitle:@"Back" destructiveButtonTitle:nil 
+                                      otherButtonTitles:@"Github", nil];
+    [githubLinkSheet showInView:self.view];
+    [githubLinkSheet release];
+}
+
+
 - (void)donatePressed:(id)specifier {
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://chpwn.com/apps/spire/donate"]];
     UIActionSheet *donationApology = [[UIActionSheet alloc] 
-    	initWithTitle:@"I'm not accepting donations at this time, but thanks for the kind thought! Truthfully, I just haven't gotten arround to setting up my donation pages." 
+    	initWithTitle:@"I'm not accepting donations at this time, but thanks for the kind thought! Truthfully, I just haven't gotten around to setting up my donation pages." 
         delegate:nil 
         cancelButtonTitle:nil  destructiveButtonTitle:nil 
         otherButtonTitles:@"Alright", nil];
